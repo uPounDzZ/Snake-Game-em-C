@@ -1,25 +1,65 @@
-# 🐍 Jogo da Cobrinha (Snake Game em C)
+==========================
+  JOGO DA COBRINHA (C)
+==========================
 
-Um mini jogo da cobrinha feito em linguagem C, rodando direto no terminal do Windows (PowerShell). 
+Descrição:
+-----------
+Este é um jogo da cobrinha (snake game) feito em linguagem C para rodar no terminal do Windows.
+O jogador controla a cobrinha usando as setas do teclado, tentando comer os pontos (letra "c") sem bater nas paredes ou em si mesmo.
+Cada ponto coletado aumenta o tamanho da cobra e a pontuação.
 
-## 🛠 Requisitos
+Requisitos:
+------------
+- Sistema operacional: Windows
+- Compilador C (como GCC com suporte a Windows - Ex: MinGW ou TDM-GCC)
+- Terminal como CMD ou PowerShell
 
-- Windows 10 ou superior
-- [MinGW (GCC para Windows)](https://sourceforge.net/projects/mingw/)
-- Terminal PowerShell
+Compilação:
+------------
+Para compilar o código, use o seguinte comando no terminal (PowerShell ou CMD):
 
-> ⚠ Este jogo usa bibliotecas específicas do Windows (`conio.h` e `windows.h`) e só funciona corretamente em terminais do próprio Windows.
+    gcc -o cobrinha cobrinha.c
 
----
+Isso irá gerar um executável chamado "cobrinha.exe".
 
-## 🧩 Instalação do MinGW
+Execução:
+----------
+Para rodar o jogo após compilar:
 
-1. Baixe o instalador: [mingw-get-setup.exe](https://sourceforge.net/projects/mingw/)
-2. Na instalação, marque os seguintes pacotes:
-   - `mingw32-base`
-   - `mingw32-gcc-g++`
-3. Aplique as mudanças (`Installation > Apply Changes`)
-4. Adicione o caminho `C:\MinGW\bin` à variável de ambiente `Path`
-5. Reinicie o PowerShell e digite:
-   ```powershell
-   gcc --version
+    ./cobrinha
+
+ou
+
+    cobrinha.exe
+
+Controles:
+-----------
+- SETAS (↑ ↓ ← →): Movem a cobra
+- ENTER: Seleciona opções no menu
+- ESC: Sai do jogo
+
+Modos:
+-------
+Ao iniciar, você verá um menu com as opções:
+
+1. Jogar o jogo
+2. Ver recordes
+3. Tutorial
+4. Sair do jogo
+
+Recordes:
+----------
+Os recordes de pontuação são salvos automaticamente no arquivo:
+
+    recordes.txt
+
+Cada linha mostra a pontuação e o nome do jogador.
+
+Avisos:
+--------
+- Este código foi feito para rodar em **Windows**. Não funciona corretamente em Linux ou macOS por depender de <windows.h> e <conio.h>.
+- O terminal será redimensionado automaticamente ao iniciar o jogo.
+
+Autor:
+-------
+Feito por: [SEU NOME AQUI]
